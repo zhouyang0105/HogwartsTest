@@ -1,4 +1,4 @@
-package com.hogwarts.web;
+package com.ceshiren.hogwarts.web;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,8 +23,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * 企业微信自动化登录实战
+ * PO代表业务的具体实现，case代表业务功能覆盖
  */
-public class ContactTest {
+public class ContactClassicTest {
 
     private static WebDriver driver;
 
@@ -69,7 +70,7 @@ public class ContactTest {
 
 
 //    @Test
-//    void contactAdd() {
+//    void contackAdd() {
 ////        driver.findElement(By.cssSelector("[node-type=addmember]")).click();
 //        driver.findElement(By.linkText("添加成员")).click();
 //        driver.findElement(By.name("username")).sendKeys("seveniruby");
@@ -79,7 +80,7 @@ public class ContactTest {
 //    }
 
     @Test
-    void contactAdd() {
+    void contackAdd() {
 //        driver.findElement(By.cssSelector("[node-type=addmember]")).click();
         click(By.linkText("添加成员"));
         sendKeys(By.name("username"), "seveniruby");
@@ -93,19 +94,16 @@ public class ContactTest {
 
     }
 
-
     @Test
     void departmentSearch() {
         click(By.id("menu_contacts"));
-        sendKeys(By.id("memberSearchInput"), "霍格沃兹测试学院");
-
-        String content = driver.findElement(By.cssSelector(".js_party_info")).getText();//取文本内容
+        sendKeys(By.id("memberSearchInput"), "销售部");
+        String content = driver.findElement(By.cssSelector(".js_party_info")).getText();
         System.out.println(content);
-        click(By.cssSelector(".ww_icon_AddMember")); //点击页面，防止有延迟页面没有加载出来
-
+        click(By.cssSelector(".ww_icon_AddMember"));
         content = driver.findElement(By.cssSelector(".js_party_info")).getText();
         System.out.println(content);
-        assertTrue(content.contains("无任何成员"));   //部门下没有成员
+        assertTrue(content.contains("无任何成员"));
     }
 
     @Test
@@ -120,7 +118,7 @@ public class ContactTest {
     }
 
 
-    //常用操作简单封装
+
     void click(By by) {
         driver.findElement(by).click();
     }
