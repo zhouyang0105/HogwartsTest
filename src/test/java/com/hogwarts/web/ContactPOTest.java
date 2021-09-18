@@ -15,7 +15,7 @@ public class ContactPOTest {
     @BeforeAll
     static void beforeAll() throws IOException, InterruptedException {
         main = new MainPage();
-//        清理数据
+//        清理数据   ui删除，一般建议调接口删除
         main.contact().clearAllDeparts();
         //为什么不放afterAll，如果你的用例中途被停止，teardown是不能保证一定会被执行，下次用例就会因为没清理数据导致失败
     }
