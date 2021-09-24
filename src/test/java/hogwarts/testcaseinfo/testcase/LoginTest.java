@@ -1,4 +1,4 @@
-package com.testcaseinfo.testcase;
+package hogwarts.testcaseinfo.testcase;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

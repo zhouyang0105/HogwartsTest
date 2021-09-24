@@ -1,6 +1,5 @@
-package com.hogwarts.web;
+package hogwarts.web;
 
-import com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

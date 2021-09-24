@@ -1,4 +1,4 @@
-package com.ceshiren.hogwarts.web;
+package hogwarts.web;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

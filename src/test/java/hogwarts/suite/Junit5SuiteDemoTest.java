@@ -1,11 +1,9 @@
-package com.suite;
+package hogwarts.suite;
 
-import com.testcaseinfo.testcase.Junit5Demo1Test;
+import hogwarts.testcaseinfo.testcase.Junit5Demo1Test;
 import org.junit.platform.runner.JUnitPlatform;
-import org.junit.platform.suite.api.IncludePackages;
 import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectClasses;
-import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)

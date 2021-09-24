@@ -22,6 +22,7 @@
 
 
     <dependencies>
+        <!--junit5依赖-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -32,17 +33,18 @@
             <artifactId>junit-platform-runner</artifactId>
             <version>1.5.1</version>
         </dependency>
+
+        <!--selenium依赖-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>3.141.59</version>
             <scope>test</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -51,11 +53,35 @@
             <scope>test</scope>
         </dependency>
 
+        <!--数据格式化-->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
             <version>2.11.4</version>
         </dependency>
+
+        <!--导入appium依赖-->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!--appium java-client-->
+        <dependency>
+            <groupId>com.github.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+
     </dependencies>
+
+
+    <!--appium java-client-->
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>
