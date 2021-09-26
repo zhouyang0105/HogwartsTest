@@ -1,9 +1,11 @@
+#todo: 再数据驱动中再次实现参数化支持
 data:
 - a
 - b
 - c
 
 
+#todo: 支持 page object
 steps:
   - chrome: {}
   - implicitly_wait: 5
@@ -11,6 +13,7 @@ steps:
   - find: { id: search-button }
   - click: {}
   - find: { id: search-term }
-  - send_keys: { data }
+  - send_keys: ${data}
+#  - quit: {}
 
 

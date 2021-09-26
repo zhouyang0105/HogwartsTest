@@ -6,7 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.IOException;
-import java.util.stream.Stream;
+import java.util.List;
 
 /**
  * 参数化框架5--实战2-数据驱动：读到的Yaml参数是一个类(code)
@@ -33,7 +33,7 @@ public class ParamsTest1 {
         testCase.run();
 
     }
-    static Stream<TestCase> search() throws IOException {
+    static List<TestCase> search() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        TypeReference typeReference = new TypeReference<List<String>>() {
@@ -42,8 +42,16 @@ public class ParamsTest1 {
         TestCase testCase =  mapper.readValue( //读取的数据是TestCase类型的
                 ParamsTest.class.getResourceAsStream("/framework/search.yaml"),
                 TestCase.class);
-        return Stream.of(testCase);
+        return testCase.testcase_generate(); // 先读取数据，在调用 testcase_generate() 获取想要的测试数据
+
 
     }
+
+/*    @AfterAll
+    static void afterAll(){
+        //关闭浏览器
+
+        yaml 里写了quit
+    }*/
 
 }
