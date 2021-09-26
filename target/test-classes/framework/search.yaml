@@ -1,4 +1,16 @@
----
+data:
 - a
 - b
 - c
+
+
+steps:
+  - chrome: {}
+  - implicitly_wait: 5
+  - get_url: https://ceshiren.com/
+  - find: { id: search-button }
+  - click: {}
+  - find: { id: search-term }
+  - send_keys: { data }
+
+
