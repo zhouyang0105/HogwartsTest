@@ -33,6 +33,13 @@
             <artifactId>junit-platform-runner</artifactId>
             <version>1.5.1</version>
         </dependency>
+        <!--junit参数化-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
 
         <!--selenium依赖-->
         <dependency>
@@ -72,7 +79,7 @@
             <artifactId>java-client</artifactId>
             <version>7.3.0</version>
         </dependency>
-
+        <!---->
     </dependencies>
 
 
