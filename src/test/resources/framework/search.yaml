@@ -14,6 +14,7 @@ steps:
   - click: {}
   - find: { id: search-term }
   - send_keys: ${data}
-#  - quit: {}
+  - sleep: 2
+  - quit: {}
 
 

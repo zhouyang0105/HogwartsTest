@@ -1,4 +1,4 @@
-package com.hogwarts.framework;
+package com.hogwarts.framework.params;
 
 
 import org.openqa.selenium.By;
@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  *   - find: { id: search-term }
  *   - send_keys: { data }
  */
-public class TestCase {
+public class SeleniumTestCase {
     public  List<String> data;
     public  List<HashMap<String,Object>> steps;
     public  ChromeDriver driver;
@@ -42,16 +42,16 @@ public class TestCase {
      * 优化1：search.yaml 中 data有数据，进行循环。
      * @return
      */
-    public List<TestCase> testcase_generate(){
+    public List<SeleniumTestCase> testcase_generate(){
 //        data.forEach(item->{
-//              TestCase testcaseNew =   new TestCase();
+//              SeleniumTestCase testcaseNew =   new SeleniumTestCase();
 //              testcaseNew.index=i;
 //
 //        });
 
-        List<TestCase> testCasesList = new ArrayList<>();
+        List<SeleniumTestCase> testCasesList = new ArrayList<>();
         for(int i = 0; i < data.size(); i++) {
-            TestCase testcaseNew = new TestCase();
+            SeleniumTestCase testcaseNew = new SeleniumTestCase();
             testcaseNew.index=i;
 
             //对数据赋值，不然会报空指针异常
@@ -132,7 +132,13 @@ public class TestCase {
             if(step.keySet().contains("quit")){
                 driver.quit();
             }
-
+            if(step.keySet().contains("sleep")){
+                try {
+                    Thread.sleep(  Long.valueOf( getValue(step,"sleep").toString())  );
+                } catch(InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
         });
 

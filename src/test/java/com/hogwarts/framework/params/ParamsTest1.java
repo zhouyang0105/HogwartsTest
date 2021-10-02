@@ -1,4 +1,4 @@
-package com.hogwarts.framework;
+package com.hogwarts.framework.params;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -19,7 +19,7 @@ public class ParamsTest1 {
 
     @ParameterizedTest
     @MethodSource
-    void search(TestCase testCase){
+    void search(SeleniumTestCase testCase){
         //todo 测试步骤
 //        ChromeDriver driver = new ChromeDriver();
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,15 +33,15 @@ public class ParamsTest1 {
         testCase.run();
 
     }
-    static List<TestCase> search() throws IOException {
+    static List<SeleniumTestCase> search() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        TypeReference typeReference = new TypeReference<List<String>>() {
 //        };
 
-        TestCase testCase =  mapper.readValue( //读取的数据是TestCase类型的
+        SeleniumTestCase testCase =  mapper.readValue( //读取的数据是TestCase类型的
                 ParamsTest.class.getResourceAsStream("/framework/search.yaml"),
-                TestCase.class);
+                SeleniumTestCase.class);
         return testCase.testcase_generate(); // 先读取数据，在调用 testcase_generate() 获取想要的测试数据
 
 
