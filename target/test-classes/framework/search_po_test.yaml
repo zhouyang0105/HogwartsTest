@@ -1,0 +1,27 @@
+#todo: 再数据驱动中再次实现参数化支持
+data:
+- demo
+- selenium
+- junit
+
+
+#todo: 支持 page object
+steps:
+  - MainPage: {}
+  - mainPage.search: {}
+  - searchPage: {}
+  - searchPage.search: ${data}
+
+
+
+#  - chrome: {}
+#  - implicitly_wait: 5
+#  - get_url: https://ceshiren.com/
+#  - find: { id: search-button }
+#  - click: {}
+#  - find: { id: search-term }
+#  - send_keys: ${data}
+#  - sleep: 2
+#  - quit: {}
+
+

@@ -1,0 +1,6 @@
+projectKey=1013:junit5demo
+serverUrl=http://192.168.1.6:11000
+serverVersion=7.5.0.20543
+dashboardUrl=http://192.168.1.6:11000/dashboard?id=1013%3Ajunit5demo
+ceTaskId=AXx4s05sUaHgvs1RcnKd
+ceTaskUrl=http://192.168.1.6:11000/api/ce/task?id=AXx4s05sUaHgvs1RcnKd

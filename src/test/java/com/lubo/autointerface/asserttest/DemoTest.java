@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 public class DemoTest {
-    @Test
+   // @Test
     void fun(){
         given()
                 .get("https://www.baidu.com")

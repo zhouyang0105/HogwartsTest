@@ -11,7 +11,7 @@ import java.util.HashMap;
 /**
  * 基础功能封装
  */
-public class BasePage {
+public class                                                                                                             BasePage {
 
     WebDriver driver;
     HashMap<String,Object> pages = new HashMap<>();

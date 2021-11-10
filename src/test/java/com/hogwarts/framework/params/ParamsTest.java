@@ -113,7 +113,7 @@ public class ParamsTest {
         TypeReference typeReference = new TypeReference<List<String>>() {
         };
 
-        /*//调试
+ /**      //调试
         List<String> list = new ArrayList<String>();
         list.add("a");
         list.add("demo");

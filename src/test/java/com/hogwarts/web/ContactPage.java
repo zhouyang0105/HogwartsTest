@@ -29,7 +29,7 @@ public class ContactPage extends BasePage {
     //po原则5 不要实现所有的方法，按需封装
     public ContactPage searchDepart(String departName){
         //po原则1 用公共方法代表页面所提供的功能
-        //po原则3  通常不要在po方法内添加断言
+        //po原则3 通常不要在po方法内添加断言
         sendKeys(By.id("memberSearchInput"), departName);
         String content = driver.findElement(parterInfo).getText();
         System.out.println(content);
